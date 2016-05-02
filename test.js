@@ -15,12 +15,9 @@ test('emits event on docker create', (t) => {
     t.ok(true, 'emits create event')
   })
 
-  exec('docker create ubuntu', (err, stdout, stderr) => {
+  exec('docker create hello-world', (err, stdout, stderr) => {
     if (err) {
       t.error(err)
-    }
-    if (stderr) {
-      t.error(new Error('Detected stderr content: ' + stderr))
     }
     workingContainer = stdout
     t.ok(true, 'working container id returned via shell')
@@ -38,9 +35,6 @@ test('emits event on docker rm', (t) => {
   exec('docker rm -f ' + workingContainer, (err, stdout, stderr) => {
     if (err) {
       t.error(err)
-    }
-    if (stderr) {
-      t.error(new Error('Detected stderr content: ' + stderr))
     }
   })
 })
