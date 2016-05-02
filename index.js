@@ -1,7 +1,3 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('longjohn')
-}
-
 const request = require('request')
 const JSONStream = require('JSONStream')
 const es = require('event-stream')
