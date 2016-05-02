@@ -1,6 +1,6 @@
 {
   "name": "dkevents",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Docker Events EventEmitter",
   "main": "index.js",
   "scripts": {
